@@ -2,7 +2,7 @@ Drupal Setup:
 
 1> Follow instructions on this page https://ddev.com/get-started/, to install and start using DDEV. Once OrbStack Docker Provider and DDEV is installed move to step 2>
 
-2> Pull the code down from Repository. Go inside nibs-drupal folder:
+2> Pull the code down from Repository. Go inside nibs-drupal folder using terminal command:
     cd nibs-drupal
 
 3> Start ddev:
