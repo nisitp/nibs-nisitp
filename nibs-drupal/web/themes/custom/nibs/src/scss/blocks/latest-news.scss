@@ -1,0 +1,60 @@
+@import "../init/_init";
+
+.block-news-block {
+    .block__content {
+        > h3 {
+            font-size: 2em;
+            @include space(margin, bottom, 1);
+        }
+
+        .node {
+            @include space(margin, bottom, 0.5);
+
+            .title {
+                @include space(margin, bottom, 0.5);
+                font-size: 1.25em;
+
+                .up {
+                    display: none;
+                }
+
+                .down {
+                    display: inline-block;
+                }
+
+                &.content-open {
+                    .up {
+                        display: inline-block;
+                    }
+
+                    .down {
+                        display: none;
+                    }
+                }
+            }
+
+            .content {
+                &.hide{
+                    transition: all .5s ease-in-out;
+                    display: none;
+                    opacity: 0;
+                    height: 0;
+                }
+                
+                .field {
+                    @include space(margin, bottom, 0.5);
+
+                    &.field--name-field-department {
+                        .field__items {
+                            .field__item {
+                                @extend %comma-separated-inline-list;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+}

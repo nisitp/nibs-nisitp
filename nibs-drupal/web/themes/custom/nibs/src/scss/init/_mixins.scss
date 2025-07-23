@@ -1,0 +1,42 @@
+@function get-col($color, $map: $colors) {
+  @if (map-has-key($map, $color)) {
+    @return map-get($map, $color);
+  } @else {
+
+    @warn "No such color [" + $color + "] in [" + $map + "]";
+  }
+}
+
+@mixin space($type:margin, $direction:all, $amount:$gutter, $important:0) {
+
+  @if unitless($amount) {
+    $amount: $gutter * $amount;
+  }
+
+  // a bit hamfisted but better than the early very non-DRY version.
+
+  @each $localdir in ("left", "right", "top", "bottom") {
+    $val: "";
+    $do: 0;
+
+    @if $direction == $localdir or $direction ==  "all" {
+      $do: 1;
+    } @else if $direction == "topbottom" and ($localdir == "top" or $localdir == "bottom") {
+      $do: 1;
+    } @else if $direction == "leftright" and ($localdir == "left" or $localdir == "right") {
+      $do: 1;
+    }
+
+    @if ($do == 1) {
+      $selector: $type + "-" + $localdir;
+
+      @if $important != 0 {
+        $val: $amount + " !important";
+      } @else {
+        $val: $amount;
+      }
+
+      #{$selector}: #{$val};
+    }
+  }
+}

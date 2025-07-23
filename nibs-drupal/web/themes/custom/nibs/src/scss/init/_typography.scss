@@ -1,0 +1,13 @@
+%base-font {
+  font-family: 'Lato', helvetica, sans-serif;
+  font-weight: 400;
+}
+
+
+html body {
+  @extend %base-font;
+}
+
+h1 {
+  font-size: 2.5rem;
+}

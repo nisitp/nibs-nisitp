@@ -1,0 +1,17 @@
+%inline-block {
+  display: inline-block;
+}
+
+%comma-separated-inline-list {
+  @extend %inline-block;
+
+    &:after {
+        content: ',';
+        padding-right: 5px;
+    }
+
+    &:last-child:after {
+        content: '';
+        padding-right: 0px;
+    }
+}

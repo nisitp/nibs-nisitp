@@ -1,0 +1,82 @@
+@import "init/_reset"; 
+@import "init/_init";
+@import "init/typography";
+@import "content-types/news";
+@import "blocks/latest-news";
+@import "blocks/views";
+
+
+body {
+    background-image: none;
+
+    #page-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+
+        .main-content {
+            width: 100%;
+
+            > .container {
+                max-width: none;
+
+                > .grid-full {
+                    grid-template-columns: 3fr 1fr;
+                    margin-left: 0px;
+
+                    > main,
+                    > aside {
+                        // resetting styling from parent theme here for now to fix overall layout issues
+                        display: block;
+                        grid-column: auto;
+                    }
+
+                    @include bp (0, m){
+                        grid-template-columns: 1fr;
+                    }
+
+                    @include bp (m, l){
+                        display: grid;
+                        grid-template-columns: 1.75fr 1fr;
+
+                        > main,
+                        > aside {
+                            // resetting styling from parent theme here for now to fix overall layout issues
+                            &,
+                            .grid-full {
+                                display: block;
+                                grid-column: auto;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+            #block-nibs-primary-local-tasks {
+                grid-column: auto;
+            }
+        }
+
+        .site-footer {
+            background: get-col('dark-blue'); 
+            border-inline-start: solid 0px get-col('dark-blue');
+
+            > .container {
+                // reset width coming from parent theme
+                width: 100%;
+                max-width: 100%;
+
+
+                .grid-full {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    
+                     #block-nibs-powered {
+                        display: block;
+                        grid-column: auto;
+                    }
+                }
+            }
+        }
+    }
+}

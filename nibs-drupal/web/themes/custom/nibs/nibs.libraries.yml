@@ -1,0 +1,6 @@
+nibs:
+  js:
+    dist/js/main.js: {}
+  css:
+    component:
+      dist/css/style.css: {}

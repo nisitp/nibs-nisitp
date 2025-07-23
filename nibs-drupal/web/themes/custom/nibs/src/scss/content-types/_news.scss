@@ -1,0 +1,17 @@
+.node--type-news-article {
+
+    .field--name-field-department {
+        .field__items {
+            .field__item {
+                @extend %comma-separated-inline-list;
+            }
+        }
+    }
+    
+    &.node--view-mode-teaser {
+        .title * {
+            cursor: pointer;
+            color: get-col('primary');
+        }
+    }
+}
