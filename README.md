@@ -22,4 +22,20 @@ Site should open in browser. Site url should look like: https://nibs-drupal.ddev
 
 
 
+Tools Used:
+Ddev / Docker
+Drupal 11
+Node.js
+SASS / CSS
+Javascript
+Twig
+MySQL
+
+
+Drupal Modules Used:
+Admin Toolbar
+ctools
+Display Suite
+PathAuto
+Smart Trim
 
