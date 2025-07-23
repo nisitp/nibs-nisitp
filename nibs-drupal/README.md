@@ -1,13 +1,20 @@
-Follow instructions on this page https://ddev.com/get-started/, to install and start using DDEV 
+Drupal Setup:
 
+1> Follow instructions on this page https://ddev.com/get-started/, to install and start using DDEV. Once OrbStack Docker Provider and DDEV is installed plase move to step 2>
 
-cd nibs-drupal
-ddev start
-ddev import-db --file=./backup/db.sql.gz
+2> Pull the code down from Repository. Go inside nibs-drupal folder:
+    cd nibs-drupal
 
-ddev launch
+3> Start ddev:
+    ddev start
 
-Site should be open in browser. Get Site url should look like: https://nibs-drupal.ddev.site:PORTNUMBER/
+4> Import DB:
+    ddev import-db --file=./backup/db.sql.gz
+
+5> Lunach the site:
+    ddev launch
+
+Site should open in browser. Site url should look like: https://nibs-drupal.ddev.site:PORTNUMBER/
 
 
 
