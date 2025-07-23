@@ -37,6 +37,8 @@ ctools
 Display Suite
 PathAuto
 Smart Trim
+Media
+Media Library
 
 
 
