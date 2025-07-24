@@ -6,16 +6,16 @@ Drupal Setup:
 
 1> Follow instructions on this page https://ddev.com/get-started/, to install and start using DDEV. Once OrbStack Docker Provider and DDEV is installed move to step 2>
 
-2> Pull the code down from Repository. Go inside nibs-drupal folder using terminal command::
+2> Pull the code down from Repository. Go inside 'nibs-drupal' folder by using terminal command:
     cd nibs-drupal
 
-3> Start ddev:
+3> Start ddev by running this command in terminal from inside 'nibs-drupal' folder:
     ddev start
 
-4> Import DB:
+4> Import DB by running this command in terminal from inside 'nibs-drupal' folder:
     ddev import-db --file=./backup/db.sql.gz
 
-5> Lunach the site:
+5> Launch the site by running this command in terminal from inside 'nibs-drupal' folder:
     ddev launch
 
 Site should open in browser. Site url should look like: https://nibs-drupal.ddev.site:PORTNUMBER/
@@ -48,16 +48,16 @@ Laravel Setup for Feedback REST API:
 
 1> If you haven't already installed OrbStack Docker Provider & DDEV previously, Follow instructions on this page https://ddev.com/get-started/, to install and start using DDEV. Once OrbStack Docker Provider and DDEV is installed move to step 2>
 
-2> If you haven't already Pulled  the code down from Repository, Pull the code down from Repository and  Go inside nibs-laravel folder from the root of the repository using terminal:
+2> If you haven't already Pulled  the code down from Repository, Pull the code down from Repository and  Go inside 'nibs-laravel' folder from the root of the repository using terminal command:
     cd nibs-laravel
 
 3> Once inside folder 'nibs-laravel' run migrations using following command:
     ddev php artisan migrate
 
-4> To test the unit Tests run following command:
+4> To test the unit Tests run following command from inside folder 'nibs-laravel':
     ddev php artisan test
 
-5> To launch the app run follwing command:
+5> To launch the app run follwing command from inside folder 'nibs-laravel':
     ddev php artisan serve --port=33002
 
 6> App should come up on url: https://laravel-feedback-api.ddev.site:33002
